@@ -21,42 +21,45 @@ export const StarBackground = () => {
   }, []);
 
   const generateStars = () => {
-    const numberOfStars = Math.floor(
-      (window.innerWidth * window.innerHeight) / 10000
+    // generate chip nodes
+    const numberOfNodes = Math.floor(
+      (window.innerWidth * window.innerHeight) / 14000
     );
 
-    const newStars = [];
+    const newNodes = [];
 
-    for (let i = 0; i < numberOfStars; i++) {
-      newStars.push({
+    for (let i = 0; i < numberOfNodes; i++) {
+      newNodes.push({
         id: i,
-        size: Math.random() * 3 + 1,
+        size: Math.random() * 4 + 2,
         x: Math.random() * 100,
         y: Math.random() * 100,
-        opacity: Math.random() * 0.5 + 0.5,
-        animationDuration: Math.random() * 4 + 2,
+        opacity: Math.random() * 0.4 + 0.3,
+        animationDuration: Math.random() * 6 + 4,
       });
     }
 
-    setStars(newStars);
+    setStars(newNodes);
   };
 
   const generateMeteors = () => {
-    const numberOfMeteors = 4;
-    const newMeteors = [];
+    // generate flowing traces
+    const numberOfTraces = 8;
+    const newTraces = [];
 
-    for (let i = 0; i < numberOfMeteors; i++) {
-      newMeteors.push({
+    for (let i = 0; i < numberOfTraces; i++) {
+      newTraces.push({
         id: i,
-        size: Math.random() * 2 + 1,
+        size: Math.random() * 1.5 + 0.5,
         x: Math.random() * 100,
-        y: Math.random() * 20,
-        delay: Math.random() * 15,
-        animationDuration: Math.random() * 3 + 3,
+        y: Math.random() * 100,
+        delay: Math.random() * 8,
+        animationDuration: Math.random() * 6 + 4,
+        direction: Math.random() > 0.5 ? "horizontal" : "vertical",
       });
     }
 
-    setMeteors(newMeteors);
+    setMeteors(newTraces);
   };
 
   return (
@@ -64,7 +67,7 @@ export const StarBackground = () => {
       {stars.map((star) => (
         <div
           key={star.id}
-          className="star animate-pulse-subtle"
+          className="chip-node animate-pulse-subtle"
           style={{
             width: star.size + "px",
             height: star.size + "px",
@@ -76,17 +79,27 @@ export const StarBackground = () => {
         />
       ))}
 
-      {meteors.map((meteor) => (
+      {meteors.map((trace) => (
         <div
-          key={meteor.id}
-          className="meteor animate-meteor"
+          key={trace.id}
+          className={`chip-trace ${
+            trace.direction === "horizontal"
+              ? "chip-trace-horizontal"
+              : "chip-trace-vertical"
+          }`}
           style={{
-            width: meteor.size * 50 + "px",
-            height: meteor.size * 2 + "px",
-            left: meteor.x + "%",
-            top: meteor.y + "%",
-            animationDelay: meteor.delay,
-            animationDuration: meteor.animationDuration + "s",
+            width:
+              trace.direction === "horizontal"
+                ? trace.size * 80 + "px"
+                : trace.size * 2 + "px",
+            height:
+              trace.direction === "horizontal"
+                ? trace.size * 2 + "px"
+                : trace.size * 80 + "px",
+            left: trace.x + "%",
+            top: trace.y + "%",
+            animationDelay: trace.delay + "s",
+            animationDuration: trace.animationDuration + "s",
           }}
         />
       ))}

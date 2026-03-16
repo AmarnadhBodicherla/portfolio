@@ -2,29 +2,27 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 const skills = [
-  // Frontend
-  { name: "HTML/CSS", level: 95, category: "frontend" },
-  { name: "JavaScript", level: 90, category: "frontend" },
-  { name: "React", level: 90, category: "frontend" },
-  { name: "TypeScript", level: 85, category: "frontend" },
-  { name: "Tailwind CSS", level: 90, category: "frontend" },
-  { name: "Next.js", level: 80, category: "frontend" },
+  // Programming
+  { name: "C", level: 85, category: "programming" },
+  { name: "Embedded C", level: 80, category: "programming" },
+  { name: "Python", level: 75, category: "programming" },
 
-  // Backend
-  { name: "Node.js", level: 80, category: "backend" },
-  { name: "Express", level: 75, category: "backend" },
-  { name: "MongoDB", level: 70, category: "backend" },
-  { name: "PostgreSQL", level: 65, category: "backend" },
-  { name: "GraphQL", level: 60, category: "backend" },
+  // Hardware & Design
+  { name: "Verilog RTL Design", level: 80, category: "hardware" },
+  { name: "FPGA (Xilinx Vivado)", level: 75, category: "hardware" },
+  { name: "PCB Design (KiCad)", level: 70, category: "hardware" },
+  { name: "Circuit Debugging", level: 80, category: "hardware" },
+  { name: "Sensors & IoT Systems", level: 75, category: "hardware" },
 
   // Tools
-  { name: "Git/GitHub", level: 90, category: "tools" },
-  { name: "Docker", level: 70, category: "tools" },
-  { name: "Figma", level: 85, category: "tools" },
-  { name: "VS Code", level: 95, category: "tools" },
+  { name: "LabVIEW", level: 80, category: "tools" },
+  { name: "MATLAB", level: 70, category: "tools" },
+  { name: "ModelSim", level: 75, category: "tools" },
+  { name: "Arduino IDE", level: 85, category: "tools" },
+  { name: "LTspice", level: 75, category: "tools" },
 ];
 
-const categories = ["all", "frontend", "backend", "tools"];
+const categories = ["all", "programming", "hardware", "tools"];
 
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");

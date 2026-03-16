@@ -3,30 +3,31 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "SaaS Landing Page",
-    description: "A beautiful landing page app using React and Tailwind.",
+    title: "Air Quality Monitoring System",
+    description:
+      "IoT-based system measuring CO₂, smoke, and harmful gases using MQ sensors with real-time monitoring on a microcontroller.",
     image: "/projects/project1.png",
-    tags: ["React", "TailwindCSS", "Supabase"],
+    tags: ["Embedded C", "Sensors", "IoT"],
     demoUrl: "#",
     githubUrl: "#",
   },
   {
     id: 2,
-    title: "Orbit Analytics Dashboard",
+    title: "LabVIEW Automatic Water Controller",
     description:
-      "Interactive analytics dashboard with data visualization and filtering capabilities.",
+      "Automated water level monitoring and pump control using LabVIEW, DAQ, and sensor-based feedback to prevent overflow.",
     image: "/projects/project2.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
+    tags: ["LabVIEW", "Control Systems", "DAQ"],
     demoUrl: "#",
     githubUrl: "#",
   },
   {
     id: 3,
-    title: "E-commerce Platform",
+    title: "Robotic Automation using Dobot",
     description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
+      "Programmed a Dobot robotic arm for precise pick-and-place operations with trajectory planning and speed control.",
     image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
+    tags: ["Robotics", "Automation", "Dobot"],
     demoUrl: "#",
     githubUrl: "#",
   },
@@ -97,12 +98,8 @@ export const ProjectsSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <a
-            className="cosmic-button w-fit flex items-center mx-auto gap-2"
-            target="_blank"
-            href="https://github.com/machadop1407"
-          >
-            Check My Github <ArrowRight size={16} />
+          <a className="cosmic-button w-fit flex items-center mx-auto gap-2">
+            More Projects Coming Soon <ArrowRight size={16} />
           </a>
         </div>
       </div>

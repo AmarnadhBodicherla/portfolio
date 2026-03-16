@@ -12,20 +12,20 @@ export const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold">
-              Passionate Web Developer & Tech Creator
+              Electronics & Communication Engineering Student
             </h3>
 
             <p className="text-muted-foreground">
-              With over 5 years of experience in web development, I specialize
-              in creating responsive, accessible, and performant web
-              applications using modern technologies.
+              I'm a pre-final year B.Tech ECE student passionate about robotics,
+              automation, embedded systems, and RTL design. I enjoy designing
+              reliable digital systems and bringing hardware ideas to life.
             </p>
 
             <p className="text-muted-foreground">
-              I'm passionate about creating elegant solutions to complex
-              problems, and I'm constantly learning new technologies and
-              techniques to stay at the forefront of the ever-evolving web
-              landscape.
+              I have hands-on experience with Verilog-based RTL design,
+              FPGA-based flows, PCB design, and LabVIEW-based control systems.
+              I love solving real-world problems using a mix of hardware and
+              software.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
@@ -50,10 +50,12 @@ export const AboutSection = () => {
                   <Code className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg"> Web Development</h4>
+                  <h4 className="font-semibold text-lg">
+                    RTL & Digital Design
+                  </h4>
                   <p className="text-muted-foreground">
-                    Creating responsive websites and web applications with
-                    modern frameworks.
+                    Designing and simulating digital systems using Verilog,
+                    FPGA tools, and timing-aware design practices.
                   </p>
                 </div>
               </div>
@@ -64,10 +66,12 @@ export const AboutSection = () => {
                   <User className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">UI/UX Design</h4>
+                  <h4 className="font-semibold text-lg">
+                    Embedded & IoT Systems
+                  </h4>
                   <p className="text-muted-foreground">
-                    Designing intuitive user interfaces and seamless user
-                    experiences.
+                    Building microcontroller-based systems with sensors,
+                    real-time monitoring, and automation logic.
                   </p>
                 </div>
               </div>
@@ -79,10 +83,12 @@ export const AboutSection = () => {
                 </div>
 
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">Project Management</h4>
+                  <h4 className="font-semibold text-lg">
+                    Robotics & Leadership
+                  </h4>
                   <p className="text-muted-foreground">
-                    Leading projects from conception to completion with agile
-                    methodologies.
+                    Leading hackathons, robotics projects, and guiding peers
+                    through workshops and doubt sessions.
                   </p>
                 </div>
               </div>
